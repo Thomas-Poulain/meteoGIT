@@ -6,6 +6,7 @@
 
         <script type="text/javascript" src="src/js/jquery-3.6.3.min.js"></script>
         <script type="text/javascript" src="src/js/index.js"></script>
+        <script type="text/javascript" src="src/js/script.js"></script>
         <title>meteo</title>
         <link
             rel="stylesheet"
@@ -29,11 +30,59 @@
                 <li><a href="https://openweathermap.org/appid">Aide</a></li>
             </ul>
         </div>
-        <div id="main">
-            <div id="top">
-                <h1>Quel temps fait-il à </h1>
-            </div>
-        </div>
+                <h1>Quel temps fait-il à</h1>
+                <div class="container my-5">
+                    <h1 class="text-center title">Weather in</h1>
+                    <form class="search-loaction">
+                      <input
+                        type="text"
+                        name="city"
+                        placeholder="What city?"
+                        autocomplete="off"
+                        class="form-control text-muted form-rounded p-4 shadow-sm"
+                      />
+                    </form>
+              
+                    <div class="card rounded my-3 shadow-lg d-none back-card">
+                      <div class="card-top text-center">
+                        <div class="city-name my-3">
+                          <p>Abuja</p>
+                          <span>...</span>
+                        </div>
+                        <img src="img/night_image.svg" alt="" class="card-img-top time" />
+                      </div>
+              
+                      <div class="card-body">
+                        <div class="card-mid row">
+                          <div class="col-8 text-center temp">
+                            <span>30&deg;C</span>
+                          </div>
+                          <div class="col-4 condition-temp">
+                            <p class="condition">Thunder Storm</p>
+                            <p class="high">30&deg;C</p>
+                            <p class="low">27&deg;C</p>
+                          </div>
+                        </div>
+              
+                        <div class="icon-container card shadow mx-auto">
+                          <img src="img/cloud.svg" alt="" />
+                        </div>
+                        <div class="card-bottom px-5 py-4 row">
+                          <div class="col text-center">
+                            <p>30&deg;C</p>
+                            <span>Feels Like</span>
+                          </div>
+                          <div class="col text-center">
+                            <p>55%</p>
+                            <span>Humidity</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <script src="request.js"></script>
+                  <script src="index.js"></script>
     </body>
 </html>
 
