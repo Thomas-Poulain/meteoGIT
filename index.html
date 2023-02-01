@@ -1,50 +1,40 @@
 <!DOCTYPE html>
-<head>
-    <title>Meteo</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="src/css/meteo.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="src/js/script.js"></script>
-    <script type="text/javascript" src = "src/js/jquery-3.6.3.min.js"></script>
-</head>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-    <nav class = "nav" >
-        <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="contact/">Contact</a></li>
-            <li><a href="https://openweathermap.org/appid">Aide</a></li>
-        </ul>
-    </nav>
-    <div id = "main">
-        
-        <div id ="recherche">
-            <input id="city" type="text" name="city" placeholder="Saisir une ville" required>
-            <input type="button" value="Valider" onclick="getPrevision()">
-            <br>
+        <script type="text/javascript" src="src/js/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="src/js/index.js"></script>
+        <title>meteo</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+    <body>
+        <div class="c-header"></div>
+        <input type="checkbox" class="c-btn-toggle" id="btnToggle">
+        <label class="c-btn-icon" for="btnToggle">
+            <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
+            <div class="c-btn-bar c-btn-bar--horizontal"></div>
+            <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
+        </label>
+
+        <div class="c-sidebar">
+            <ul class="c-sidebar-items">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact/">Contact</a></li>
+                <li><a href="https://openweathermap.org/appid">Aide</a></li>
+            </ul>
         </div>
-
-        <div id = "hidden">
-            <div class = "align-in-row-centered">
-                <div id="meteoDuJour">
-                </div>
-            </div>
-            <div class= "align-in-row-centered">
-                <div id="infoMeteo">
-                </div>
-            </div>
-            
-            <div class= "align-in-row-centered">
-                <div id="plusDeDetail">
-                </div>
+        <div id="main">
+            <div id="top">
+                <h1>Quel temps fait-il à </h1>
             </div>
         </div>
-    </div>
-    <footer>
-        <h3>
-            MeteoInfo
-        </h3>
-    </footer>
-</body>
-
+    </body>
+</html>
 
 
