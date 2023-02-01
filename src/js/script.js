@@ -1,6 +1,38 @@
 function getPrevision(){
+    console.log("UwU");
 
-    var xhr;
+    $(document).ready(function(){      
+        console.log("fghjkl");
+        
+        var requestData = $("#city").val();
+        var resultElement = $("#meteoDuJour");
+        resultElement.html("");
+        $.ajax({
+            url: "https://api.openweathermap.org/data/2.5/weather",
+            method: "get",
+            data: {q: requestData, appid: "ee07e2bf337034f905cde0bdedae3db8", lang:"fr", units:"metric"},
+            dataType: "json",
+            success: function(response){
+                //Parcours des enfants
+
+               if(response.message != null){
+                    resultElement.html(response.message);
+                }
+                else{
+                    resultElement.html(response.weather[0].main)
+                }
+                /*
+                console.log($(data));
+                $('#meteoDuJour').show();
+                $('#meteoDuJour').append(" : </br> ") + data[0].main;
+                */
+            }
+        });
+    }); 
+}
+
+/* 
+
     if(window.XMLHttpRequest)
         xhr = new XMLHttpRequest();
     else {
@@ -22,7 +54,7 @@ function getPrevision(){
                 data = JSON.parse(doc);
                 document.getElementById("hidden").style.visibility = 'visible';
                 document.getElementById("meteoDuJour").innerHTML = "<p>" + " Météo du jour - " + data['weather']['0']['description'] + ' <img src="http://openweathermap.org/img/wn/' +  data['weather'][0]['icon'] + '.png"' +  'alt="Weather icon">';
-                document.getElementById("infoMeteo").innerHTML = "<p>" + "Nom de la ville: " + data['name']+" - " + data['sys']['country'] + "</p>"
+                document.getElementById("infoMetshoeo").innerHTML = "<p>" + "Nom de la ville: " + data['name']+" - " + data['sys']['country'] + "</p>"
                     + "<p>" + "Température: " + data['main']['temp'] + "°C     Ressentis: " +data['main']['feels_like']+"°C" + "</p>"
                     + "<p>" + "Pression: " + data['main']['pressure']+"Pa" +'</p>'
                     + '<img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()">';
@@ -40,6 +72,8 @@ function getPrevision(){
         }
     }
 }
+
+*/
 
 function showHide() {
     if (document.getElementById("plusDeDetail").style.display == 'none'){

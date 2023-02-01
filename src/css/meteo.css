@@ -50,7 +50,7 @@ footer {
 }
 
 #hidden{
-    visibility:hidden;
+    /*visibility:hidden;*/
 }
 
 .align-in-row-centered div{
@@ -68,7 +68,7 @@ footer {
 }
 
 #plusDeDetail{
-    display: none;
+    /*display: none;*/
 }
 
 .apropos li{
