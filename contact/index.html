@@ -4,19 +4,27 @@
     <title>MeteoInfo</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="src/js/script.js"></script>
-    <link rel="stylesheet" href="../src/css/meteo.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/src/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="src/css/buble.css" />
 
 </head>
 <body>
-    <nav class = "nav" >
-        <ul class="menu">
-            <li><a href="..">Accueil</a></li>
-            <li><a href="index.html">Contact</a></li>
+
+    <div class="c-header"></div>
+    <input type="checkbox" class="c-btn-toggle" id="btnToggle">
+    <label class="c-btn-icon" for="btnToggle">
+        <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
+        <div class="c-btn-bar c-btn-bar--horizontal"></div>
+        <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
+    </label>
+
+    <div class="c-sidebar">
+        <ul class="c-sidebar-items">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="">Contact</a></li>
             <li><a href="https://openweathermap.org/appid">Aide</a></li>
         </ul>
-    </nav>
-
+    </div>
     <div id = "main">
         <ul class="apropos">
             <li><img id="thomas" src="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif"><p>POULAIN Thomas - Groupe A2</p></li>

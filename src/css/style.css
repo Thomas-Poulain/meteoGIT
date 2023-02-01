@@ -6,7 +6,8 @@ html, body{
 
 body {
   font-family: 'Raleway', sans-serif;
-  background: #e0e0e0;
+  /*background: #e0e0e0;*/
+  background-color: #52468E;
   color: #707070;
   margin: 0;
   padding: 0;
@@ -105,11 +106,11 @@ body {
   letter-spacing: -2px;
 }
 
-
 .c-header{
   width: 100%;
   height: 60px;
-  background-color: #5bbca9;
+  background-color: #484652;
+  opacity: 0.8;
   position: fixed;
 
 }
@@ -175,13 +176,14 @@ input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--diagonal.diagonal-2{
 }
 
 .c-sidebar{
+  opacity: 0.8;
   position: fixed;
   width: 250px;
   height: 100%;
   margin-top: 60px;
   transform: translateX(-250px);
   transition: transform 250ms ease-in-out;
-  background-color: #5bbca9;
+  background-color: #484652;
 }
 
 input[type="checkbox"]:checked ~ .c-sidebar{
@@ -214,21 +216,8 @@ li a{
   color: white;
 }
 
-#main{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  font-family: 'Raleway', sans-serif;
-}
-
-#main h1{
-  color: black;
-}
-
-#top{
-  display: flex;
-  margin-top: 10%;
-  flex-direction: row;
-  justify-content: center;
+.atTop{
+  margin-top: 20%;
+  color: white;
+  opacity: 0.8;
 }
