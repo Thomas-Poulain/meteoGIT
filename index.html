@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="src/js/jquery-3.6.3.min.js"></script>
     <script type="text/javascript" src="src/js/script.js"></script>
-    <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
     <title>meteo</title>
     <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/buble.css" />
   </head>
   <body>      
         <div class="c-header"></div>
@@ -32,9 +31,9 @@
         <div class="container my-5">
             <h1 class="text-center titlec atTop">Quel temps fait-il ?</h1>
             <form class="search-location">
-              <input type="text" name="city" placeholder="saisir une ville" class="form-control text-muted form-rounded p-4 shadow-sm"/>
+              <input id="searchBar" type="text" name="city" placeholder="saisir une ville" class="form-control text-muted form-rounded p-4 shadow-sm"/>
             </form>
-            <div class="card rounded my-3 shadow-lg d-none back-card">
+            <div class="card rounded my-3 d-none shadow-lg back-card">
               <div class="card-top text-center">
                 <div class="city-name my-3">
                   <p></p>
@@ -46,7 +45,7 @@
               <div class="card-body"></div>
             </div>
           </div>
-          <script src="src/js/request.js"></script>
-          <script src="src/js/index.js"></script>
   </body>
 </html>
+
+
