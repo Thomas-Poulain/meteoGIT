@@ -6,8 +6,8 @@ html, body{
 }
 
 body {
-  /*background: #e0e0e0;*/
-  background-color: #52468E;
+  /*background-color: #52468E;*/
+  background-color :#00375C;
   color: #707070;
   margin: 0;
   padding: 0;
@@ -34,6 +34,7 @@ body {
   position: absolute;
   width: 100%;
 }
+
 
 .city-name p {
   font-size: 16pt;
@@ -108,7 +109,7 @@ body {
   width: 100%;
   height: 60px;
   background-color: #484652;
-  opacity: 0.8;
+  opacity: 0.9;
   position: fixed;
 
 }
@@ -176,7 +177,7 @@ input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--diagonal.diagonal-2{
 
 .c-sidebar{
   opacity: 0.8;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 200px;
   height: 100%;
@@ -225,4 +226,9 @@ li a{
 
 .card{
   z-index: 0;
+}
+
+.imBlue_da_ba_dee_da_ba_di{
+  border: solid 1px;
+  border-color: #00375C;
 }

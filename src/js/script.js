@@ -21,7 +21,8 @@
                 success: function(city){
                     for (let index = 0; index < 36; index = index + 2) {
                         var icon = city.list[index].weather[0].icon;
-                        var date = city.list[index].dt_txt.slice(5,16);
+                        var date = city.list[index].dt_txt.slice(5,11);
+                        var heure = city.list[index].dt_txt.slice(11,16);
                             
                         var isDayTime = (iconP) => {
                             if (iconP.search('d') != -1) {
@@ -48,16 +49,15 @@
                         var iconSrc = "http://openweathermap.org/img/wn/" + icon+ "@2x.png"
                         cityName.text(city.city.name);                     
                         cards += `
-                        <div class="card rounded my-3 shadow-lg back-card">
-                
+                        <div class="card rounded my-3 shadow-lg back-card imBlue_da_ba_dee_da_ba_di">
                             <div class="card-top text-center `+fontCol+`">
-                                <div class="city-name my-3">
+                                <div class="city-name">
                                     <p>`+ city.city.name+`</p>
-                                    <p>` + date + `</p>
-                                    <span>...</span>
+                                    <p> le ` + date + `</p>
+                                    <p> à ` + heure + `</p>
                                 </div>
                                 <img src="`+srcImg+`" alt="" class="card-img-top time" />
-                            </div>
+                        </div>
         
                             <div class="card-body">
                                 <div class="card-mid row">
