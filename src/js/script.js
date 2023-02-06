@@ -52,7 +52,7 @@
                         <div class="card rounded my-3 shadow-lg back-card imBlue_da_ba_dee_da_ba_daa">
                             <div class="card-top text-center `+fontCol+`">
                                 <div class="city-name">
-                                    <p>`+ city.city.name+`</p>
+                                    <h2>`+ city.city.name+`</h2>
                                     <p> le ` + date + `</p>
                                     <p> à ` + heure + `</p>
                                 </div>
