@@ -49,7 +49,7 @@
                         var iconSrc = "http://openweathermap.org/img/wn/" + icon+ "@2x.png"
                         cityName.text(city.city.name);                     
                         cards += `
-                        <div class="card rounded my-3 shadow-lg back-card imBlue_da_ba_dee_da_ba_di">
+                        <div class="card rounded my-3 shadow-lg back-card imBlue_da_ba_dee_da_ba_daa">
                             <div class="card-top text-center `+fontCol+`">
                                 <div class="city-name">
                                     <p>`+ city.city.name+`</p>
