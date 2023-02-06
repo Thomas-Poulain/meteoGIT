@@ -187,6 +187,7 @@ input[type="checkbox"]:checked ~ .c-btn-icon > .c-btn-bar--diagonal.diagonal-2{
 }
 
 input[type="checkbox"]:checked ~ .c-sidebar{
+  position: fixed;
   transform: translateX(0);
 }
 
