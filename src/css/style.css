@@ -221,3 +221,25 @@ li a{
   border: solid 1px;
   border-color: #00375C;
 }
+
+#search{
+  display: flex;
+  flex-direction: column;
+}
+
+#bar_of_number_day{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#bar_of_number_day h4{
+  color: white;
+  opacity: 0.8;
+  height: 100%;
+  margin-bottom: 0%;
+}
+
+#numberOfDay{
+  border-radius: 40px;
+}

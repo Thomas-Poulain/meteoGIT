@@ -4,22 +4,28 @@
             e.preventDefault();
 
             var searchForm = $('.search-location');
-            var requestData = $('.form-control').val();
+            var requestData = $('#searchCity').val();
             var cityName = $('.city-name p');
             var cardBody = $('.cardList');
             var timeImage = $('.card-img-top');
             var cardInfo = $('.back-card');
-            var cards = ""
-            var fontCol = ""
-            var srcImg = ""
-
+            var cards = "";
+            var fontCol = "";
+            var srcImg = "";
+            var nbDays = $('#numberDay').val()*9;
+            const date = new Date();
+            console.log(nbDays)
+            console.log(date.getHours());
+            if(nbDays == 0){
+                nbDays = 24 - date.getHours() - 3; 
+            }
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
                 method: "get",
-                data: {q: requestData, appid: "ee07e2bf337034f905cde0bdedae3db8", lang:"fr", units:"metric", cnt:"36"},
+                data: {q: requestData, appid: "ee07e2bf337034f905cde0bdedae3db8", lang:"fr", units:"metric", cnt:nbDays},
                 dataType: "json",
                 success: function(city){
-                    for (let index = 0; index < 36; index = index + 2) {
+                    for (let index = 0; index < nbDays; index = index + 2) {
                         var icon = city.list[index].weather[0].icon;
                         var date = city.list[index].dt_txt.slice(5,11);
                         var heure = city.list[index].dt_txt.slice(11,16);

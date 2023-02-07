@@ -29,10 +29,21 @@
             </ul>
         </div>
         <div class="container my-5">
-            <h1 class="text-center titlec atTop">Quel temps fait-il ?</h1>
-            <form class="search-location">
-              <input id="searchBar" type="text" name="city" placeholder="saisir une ville" class="form-control text-muted form-rounded p-4 shadow-sm"/>
-            </form>
+            <h1 class="text-center titlec atTop">Quel temps fait-il à</h1>
+            <div id="search">
+              <form class="search-location">
+                <input id="searchCity" type="text" name="city" placeholder="saisir une ville" class="form-control text-muted form-rounded p-4 shadow-sm"/>
+              </form>
+              <br>
+              <div id="bar_of_number_day">
+                <h4>
+                  Pour combien de jours ?
+                </h4>
+                <form class="number-day">
+                  <input id="numberDay" type="number" name="numberDay" value="0" min="0" max="5" class="text-muted text-center form-rounded shadow-sm"/>
+                </form>
+              </div>
+            </div>
             <div class="cardList">
             </div>   
         </div>
