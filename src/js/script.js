@@ -67,7 +67,7 @@
                                     <div class="col-6 text-center temp">
                                         <h1>` +city.list[index].main.temp+ `°C</h1>
                                     </div>
-                                    <div class="col-6 condition-temp ">
+                                    <div class="col-6 condition-temp text-center">
                                         <h5 class="condition">`+city.list[index].weather[0].description+`</h5>
                                         <h5 class="high">max `+city.list[index].main.temp_max+`°C</h5>
                                         <h5 class="low">min `+city.list[index].main.temp_min+`°C</h5>
