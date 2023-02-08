@@ -102,7 +102,6 @@
                                             <span>Latitude</span>    
                                         </div>
                                     </div>
-                                    <br>
                                     <div class="ligne2">
                                         <div class="col text-center">
                                             <h3>`+city.list[index].wind.speed+`kts</h3>
