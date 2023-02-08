@@ -1,6 +1,6 @@
     $(function(){              
 
-        $(".search-location").on('submit', function(e){
+        $(".validate").on('submit', function(e){
             e.preventDefault();
 
             var searchForm = $('.search-location');
@@ -18,6 +18,9 @@
                 nbDays = 0;
             }
 
+            nbDays = nbDays * 9;
+            
+
             const date = new Date();
             nbDays = nbDays + (24 - date.getHours() - 9); 
             $.ajax({
@@ -26,6 +29,7 @@
                 data: {q: requestData, appid: "ee07e2bf337034f905cde0bdedae3db8", lang:"fr", units:"metric", cnt:nbDays},
                 dataType: "json",
                 success: function(city){
+                    console.log(nbDays)
                     for (let index = 0; index < nbDays; index = index + 2) {
                         var icon = city.list[index].weather[0].icon;
                         var date = city.list[index].dt_txt.slice(5,11);
