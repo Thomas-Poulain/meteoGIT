@@ -18,7 +18,7 @@
             const date = new Date();
             console.log(nbDays)
             console.log(date.getHours());
-                nbDays = nbDays + 24 - date.getHours() - 6; 
+                nbDays = nbDays + (24 - date.getHours() - 9); 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
                 method: "get",
@@ -83,11 +83,11 @@
                                 <div class="card-bottom px-8 py-4 row">
                                     <div class="col text-center">
                                         <h1>`+city.list[index].main.feels_like+`°C</h1>
-                                        <h3>Ressentis</h3>
+                                        <h5>Ressentis</h5>
                                     </div>
                                     <div class="col text-center">
                                         <h1>`+city.list[index].main.humidity+`%</h1>
-                                        <h3>Humidité</h3>    
+                                        <h5>Humidité</h5>    
                                     </div>
                                 </div>
                                 <div class="text-center">
@@ -123,6 +123,7 @@
                         </div>`
                     }   
                     
+                    plusDeDetail.hide();
                     cardBody.html(cards);  
                     searchForm.trigger("reset");
                     
