@@ -16,7 +16,7 @@
             var nbDays = $('#numberDay').val()*8;
 
             const date = new Date();
-            nbDays = nbDays + (23 - date.getHours() - 9); 
+            nbDays = nbDays + (24 - date.getHours() - 9); 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
                 method: "get",
