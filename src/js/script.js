@@ -94,11 +94,11 @@
                                     <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" class="dots img-center">
                                 </div>
                                 <div class="plusDeDetail">
-                                    <div class="col text-center">
+                                    <div class="text-center">
                                         <h3>`+city.city.coord.lon+`°</h3>
                                         <span>Longitude</span>
                                     </div>
-                                    <div class="col text-center">
+                                    <div class="text-center">
                                         <h3>`+city.city.coord.lat+`°</h3>
                                         <span>Latitude</span>    
                                     </div>
