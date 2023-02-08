@@ -249,6 +249,10 @@ li a{
 }
 
 .plusDeDetail{
-  display: flex;
+  display: none;
   flex-direction: row;
+}
+
+.dots{
+  cursor:pointer;
 }

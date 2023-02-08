@@ -13,12 +13,10 @@
             var cards = "";
             var fontCol = "";
             var srcImg = "";
-            var nbDays = $('#numberDay').val()*9;
+            var nbDays = $('#numberDay').val()*8;
 
             const date = new Date();
-            console.log(nbDays)
-            console.log(date.getHours());
-                nbDays = nbDays + (24 - date.getHours() - 9); 
+            nbDays = nbDays + (23 - date.getHours() - 9); 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
                 method: "get",
@@ -40,12 +38,10 @@
                         
     
                         if (isDayTime(icon)) {
-                            console.log('day');
                             srcImg = 'src/img/day_image.svg';    
                             fontCol = 'text-black';
                         
                         } else {
-                            console.log('night');
                             srcImg = 'src/img/night_image.svg';
                             fontCol = 'text-white';
                         }       
@@ -91,7 +87,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" class="dots img-center">
+                                    <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="dots img-center">
                                 </div>
                                 <div class="plusDeDetail">
                                     <div class="ligne1">
@@ -123,31 +119,27 @@
                         </div>`
                     }   
                     
-                    plusDeDetail.hide();
                     cardBody.html(cards);  
                     searchForm.trigger("reset");
                     
 
                     /*
 
-
+plusDeDetail.css("display", "none");
                     + "<p>" + "Vitesse du vent: " + data['wind']['speed'] + "kts    Orientation du vent: " + data['wind']['deg']+'°     Rafales: ' +data['wind']['gust'] + "kts " + "</p>";
                 
-
-
-                    function showHide() {
-                        if (document.getElementById("plusDeDetail").style.display == 'none'){
-                            document.getElementById("plusDeDetail").style.display = 'flex';
-                        }else{
-                            document.getElementById("plusDeDetail").style.display = 'none';
-                        }
-                    }
-
-                    */
-
+*/
 
                 }
             });
         })
     }); 
+
+    function showHide() {
+        if ($('.plusDeDetail').css("display") == "none"){
+            $('.plusDeDetail').css("display", "flex");
+        }else{
+            $('.plusDeDetail').css("display", "none");
+        }
+    }
 
