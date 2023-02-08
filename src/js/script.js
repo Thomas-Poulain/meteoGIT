@@ -95,11 +95,11 @@
                                 </div>
                                 <div class="plusDeDetail">
                                     <div class="col text-center">
-                                        <h1>`+city.city.coord.lon+`°</h1>
+                                        <h3>`+city.city.coord.lon+`°</h3>
                                         <span>Longitude</span>
                                     </div>
                                     <div class="col text-center">
-                                        <h1>`+city.city.coord.lat+`°</h1>
+                                        <h3>`+city.city.coord.lat+`°</h3>
                                         <span>Latitude</span>    
                                     </div>
                                 </div>
