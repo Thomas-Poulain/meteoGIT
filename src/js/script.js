@@ -89,6 +89,10 @@
                                         <h1>`+city.list[index].main.humidity+`%</h1>
                                         <span>Humidité</span>    
                                     </div>
+                                    <div id="plusDeDetail">
+
+                                    </div>
+                                </div>
                                 </div>
                             </div>           
                         </div>`
@@ -96,6 +100,28 @@
                     
                     cardBody.html(cards);  
                     searchForm.trigger("reset");
+
+
+                    /*
+                                        + '<img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()">';
+
+
+                     document.getElementById("plusDeDetail").innerHTML = "<p>" + "Longitude: " + data['coord']['lon']+"°      Latitude: " + data['coord']['lat'] + "° </p>"
+                    + "<p>" + "Vitesse du vent: " + data['wind']['speed'] + "kts    Orientation du vent: " + data['wind']['deg']+'°     Rafales: ' +data['wind']['gust'] + "kts " + "</p>";
+                
+
+
+                    function showHide() {
+                        if (document.getElementById("plusDeDetail").style.display == 'none'){
+                            document.getElementById("plusDeDetail").style.display = 'flex';
+                        }else{
+                            document.getElementById("plusDeDetail").style.display = 'none';
+                        }
+                    }
+
+                    */
+
+
                 }
             });
         })
