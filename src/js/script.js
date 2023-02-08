@@ -90,28 +90,27 @@
                                 <div class="text-center">
                                     <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="dots img-center">
                                 </div>
-                                <br>
                                 <div class="plusDeDetail">
-                                    <div class="ligne1">
-                                        <div class="col text-center">
+                                    <div class="colonne1">
+                                        <div class="col text-center margAtTop">
                                             <h3>`+city.city.coord.lon+`°</h3>
                                             <span>Longitude</span>
                                         </div>
-                                        <div class="col text-center">
+                                        <div class="col text-center margAtTop">
                                             <h3>`+city.city.coord.lat+`°</h3>
                                             <span>Latitude</span>    
                                         </div>
                                     </div>
-                                    <div class="ligne2">
-                                        <div class="col text-center">
+                                    <div class="colonne2">
+                                        <div class="col text-center margAtTop">
                                             <h3>`+city.list[index].wind.speed+`kts</h3>
                                             <span>Vitesse du vent</span>
                                         </div>
-                                        <div class="col text-center">
+                                        <div class="col text-center margAtTop">
                                             <h3>`+city.list[index].wind.deg+`°</h3>
                                             <span>Orientation du vent</span>    
                                         </div>
-                                        <div class="col text-center">
+                                        <div class="col text-center margAtTop">
                                             <h3>`+city.list[index].wind.gust+`kts</h3>
                                             <span>Rafales</span>    
                                         </div>
