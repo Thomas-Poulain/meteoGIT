@@ -89,21 +89,20 @@
                                         <h1>`+city.list[index].main.humidity+`%</h1>
                                         <span>Humidité</span>    
                                     </div>
-                                    <div id="plusDeDetail">
-
-                                    </div>
                                 </div>
-                                </div>
-                            </div>           
+                                <div class="text-center">
+                                    <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="img-center">
+                                </div>           
+                            </div>
                         </div>`
-                    }
+                    }   
                     
                     cardBody.html(cards);  
                     searchForm.trigger("reset");
 
 
                     /*
-                                        + '<img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()">';
+                    + '<img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()">';
 
 
                      document.getElementById("plusDeDetail").innerHTML = "<p>" + "Longitude: " + data['coord']['lon']+"°      Latitude: " + data['coord']['lat'] + "° </p>"
