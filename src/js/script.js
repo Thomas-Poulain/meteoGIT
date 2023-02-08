@@ -7,9 +7,6 @@
             var requestData = $('#searchCity').val();
             var cityName = $('.city-name p');
             var cardBody = $('.cardList');
-            var timeImage = $('.card-img-top');
-            var cardInfo = $('.back-card');
-            var plusDeDetail = $('.plusDeDetail');
             var cards = "";
             var fontCol = "";
             var srcImg = "";
@@ -111,7 +108,7 @@
                                         </div>
                                         <div class="col text-center">
                                             <h3>`+city.list[index].wind.gust+`kts</h3>
-                                            <span>Orientation du vent</span>    
+                                            <span>Rafales</span>    
                                         </div>
                                     </div>
                                 </div>
