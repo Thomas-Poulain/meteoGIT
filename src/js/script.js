@@ -22,6 +22,7 @@
             
 
             const date = new Date();
+            console.log("test" + nbDays)
             nbDays = nbDays + (24 - date.getHours() - 9); 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
