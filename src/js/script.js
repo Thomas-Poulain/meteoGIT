@@ -1,6 +1,6 @@
     $(function(){              
 
-        $(".validate").on('submit', function(e){
+        $(".search-location").on('submit', function(e){
             e.preventDefault();
 
             var searchForm = $('.search-location');
