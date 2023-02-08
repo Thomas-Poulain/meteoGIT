@@ -91,8 +91,18 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="img-center">
-                                </div>           
+                                    <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" class="dots img-center">
+                                </div>
+                                <div class="plusDeDetail">
+                                    <div class="col text-center">
+                                        <h1>`+city.city.coord.lon+`°</h1>
+                                        <span>Longitude</span>
+                                    </div>
+                                    <div class="col text-center">
+                                        <h1>`+city.city.coord.lat+`°</h1>
+                                        <span>Latitude</span>    
+                                    </div>
+                                </div>
                             </div>
                         </div>`
                     }   
@@ -102,7 +112,6 @@
 
 
                     /*
-                    + '<img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()">';
 
 
                      document.getElementById("plusDeDetail").innerHTML = "<p>" + "Longitude: " + data['coord']['lon']+"°      Latitude: " + data['coord']['lat'] + "° </p>"
