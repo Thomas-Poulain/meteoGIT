@@ -1,6 +1,6 @@
     $(function(){              
 
-        $(".search-location").on('submit', function(e){
+        $(".valide").on('submit', function(e){
             e.preventDefault();
 
             var searchForm = $('.search-location');
@@ -10,20 +10,13 @@
             var cards = "";
             var fontCol = "";
             var srcImg = "";
-            var nbDays = $('#numberDay').val();
-
-            if(nbDays > 0){
-                nbDays = nbDays - 1;
-            } else {
-                nbDays = 0;
-            }
-
-            nbDays = nbDays * 9;
+            const date = new Date();
+            var nbDays = ($('#numberDay').val()-1)*8;
+            nbDays =(parseInt(nbDays) + (23 - date.getHours())%3);
             
 
-            const date = new Date();
+            
             console.log("test" + nbDays)
-            nbDays = nbDays + (24 - date.getHours())%9; 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
                 method: "get",
@@ -74,7 +67,7 @@
                                     <div class="col-6 text-center temp">
                                         <h1>` +city.list[index].main.temp+ `°C</h1>
                                     </div>
-                                    <div class="col-6 condition-temp">
+                                    <div class="col-6 condition-temp ">
                                         <p class="condition">`+city.list[index].weather[0].description+`</p>
                                         <p class="high">max `+city.list[index].main.temp_max+`°C</p>
                                         <p class="low">min `+city.list[index].main.temp_min+`°C</p>
@@ -97,6 +90,7 @@
                                 <div class="text-center">
                                     <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="dots img-center">
                                 </div>
+                                <br>
                                 <div class="plusDeDetail">
                                     <div class="ligne1">
                                         <div class="col text-center">
@@ -108,6 +102,7 @@
                                             <span>Latitude</span>    
                                         </div>
                                     </div>
+                                    <br>
                                     <div class="ligne2">
                                         <div class="col text-center">
                                             <h3>`+city.list[index].wind.speed+`kts</h3>
