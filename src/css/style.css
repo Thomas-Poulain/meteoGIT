@@ -233,7 +233,7 @@ li a{
   justify-content: space-around;
 }
 
-#bar_of_number_day h4{
+#bar_of_number_day h3{
   color: white;
   opacity: 0.8;
   height: 100%;
@@ -246,4 +246,9 @@ li a{
 
 #numberDay{
   width: 50px;
+}
+
+.plusDeDetail{
+  display: flex;
+  flex-direction: row;
 }

@@ -9,16 +9,16 @@
             var cardBody = $('.cardList');
             var timeImage = $('.card-img-top');
             var cardInfo = $('.back-card');
+            var plusDeDetail = $('.plusDeDetail');
             var cards = "";
             var fontCol = "";
             var srcImg = "";
             var nbDays = $('#numberDay').val()*9;
+
             const date = new Date();
             console.log(nbDays)
             console.log(date.getHours());
-            if(nbDays == 0){
-                nbDays = 24 - date.getHours() - 3; 
-            }
+                nbDays = nbDays + 24 - date.getHours() - 6; 
             $.ajax({
                 url: "https://api.openweathermap.org/data/2.5/forecast",
                 method: "get",
@@ -83,24 +83,40 @@
                                 <div class="card-bottom px-8 py-4 row">
                                     <div class="col text-center">
                                         <h1>`+city.list[index].main.feels_like+`°C</h1>
-                                        <span>Ressentis</span>
+                                        <h3>Ressentis</h3>
                                     </div>
                                     <div class="col text-center">
                                         <h1>`+city.list[index].main.humidity+`%</h1>
-                                        <span>Humidité</span>    
+                                        <h3>Humidité</h3>    
                                     </div>
                                 </div>
                                 <div class="text-center">
                                     <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" class="dots img-center">
                                 </div>
                                 <div class="plusDeDetail">
-                                    <div class="text-center">
-                                        <h3>`+city.city.coord.lon+`°</h3>
-                                        <span>Longitude</span>
+                                    <div class="ligne1">
+                                        <div class="col text-center">
+                                            <h3>`+city.city.coord.lon+`°</h3>
+                                            <span>Longitude</span>
+                                        </div>
+                                        <div class="col text-center">
+                                            <h3>`+city.city.coord.lat+`°</h3>
+                                            <span>Latitude</span>    
+                                        </div>
                                     </div>
-                                    <div class="text-center">
-                                        <h3>`+city.city.coord.lat+`°</h3>
-                                        <span>Latitude</span>    
+                                    <div class="ligne2">
+                                        <div class="col text-center">
+                                            <h3>`+city.list[index].wind.speed+`kts</h3>
+                                            <span>Vitesse du vent</span>
+                                        </div>
+                                        <div class="col text-center">
+                                            <h3>`+city.list[index].wind.deg+`°</h3>
+                                            <span>Orientation du vent</span>    
+                                        </div>
+                                        <div class="col text-center">
+                                            <h3>`+city.list[index].wind.gust+`kts</h3>
+                                            <span>Orientation du vent</span>    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -109,12 +125,11 @@
                     
                     cardBody.html(cards);  
                     searchForm.trigger("reset");
-
+                    
 
                     /*
 
 
-                     document.getElementById("plusDeDetail").innerHTML = "<p>" + "Longitude: " + data['coord']['lon']+"°      Latitude: " + data['coord']['lat'] + "° </p>"
                     + "<p>" + "Vitesse du vent: " + data['wind']['speed'] + "kts    Orientation du vent: " + data['wind']['deg']+'°     Rafales: ' +data['wind']['gust'] + "kts " + "</p>";
                 
 
