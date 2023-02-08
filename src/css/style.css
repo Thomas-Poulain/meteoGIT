@@ -243,3 +243,7 @@ li a{
 #numberOfDay{
   border-radius: 40px;
 }
+
+#numberDay{
+  width: 50px;
+}
