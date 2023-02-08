@@ -10,7 +10,13 @@
             var cards = "";
             var fontCol = "";
             var srcImg = "";
-            var nbDays = $('#numberDay').val()*8;
+            var nbDays = $('#numberDay').val();
+
+            if(nbDays > 0){
+                nbDays = nbDays - 1;
+            } else {
+                nbDays = 0;
+            }
 
             const date = new Date();
             nbDays = nbDays + (24 - date.getHours() - 9); 
@@ -118,14 +124,6 @@
                     
                     cardBody.html(cards);  
                     searchForm.trigger("reset");
-                    
-
-                    /*
-
-plusDeDetail.css("display", "none");
-                    + "<p>" + "Vitesse du vent: " + data['wind']['speed'] + "kts    Orientation du vent: " + data['wind']['deg']+'°     Rafales: ' +data['wind']['gust'] + "kts " + "</p>";
-                
-*/
 
                 }
             });
