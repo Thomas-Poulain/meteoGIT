@@ -104,7 +104,7 @@ createApp({
                             </div>
                         </div>
                         <div class="text-center">
-                            <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" @click="details = !details" class="dots img-center">
+                            <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="dots img-center">
                         </div>
                         <div class="plusDeDetail" v-show="details">
                             <div class="colonne1">
@@ -142,3 +142,11 @@ createApp({
 
 
 }).mount('.container')
+
+function showHide() {
+    if ($('.plusDeDetail').css("display") == "none"){
+        $('.plusDeDetail').css("display", "flex");
+    }else{
+        $('.plusDeDetail').css("display", "none");
+    }
+}
