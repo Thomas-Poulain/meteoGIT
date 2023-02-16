@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meteo</title>
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+
+  <body>
+        <div class="c-header"></div>
+        <input type="checkbox" class="c-btn-toggle" id="btnToggle">
+        <label class="c-btn-icon" for="btnToggle">
+            <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
+            <div class="c-btn-bar c-btn-bar--horizontal"></div>
+            <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
+        </label>
+      
+        <div class="c-sidebar">
+            <ul class="c-sidebar-items">
+                <li><a href="">Accueil</a></li>
+                <li><a href="contact/">Contact</a></li>
+                <li><a href="https://openweathermap.org/appid">Aide</a></li>
+            </ul>
+        </div>
+        <div class="container my-5">
+            <h1 class="text-center titlec atTop">Quel temps fait-il à</h1>
+            <div id="search">
+              <form class="search-location valide" @submit.prevent="getPrevision">
+                <input id="searchCity" 
+                    type="text" 
+                    name="city" 
+                    placeholder="saisir une ville" 
+                    class="form-control text-muted form-rounded p-4 shadow-sm"
+                    v-model="cityQuery"
+                  />
+              </form>
+              <br>
+              <div id="bar_of_number_day">
+                <h3>
+                  Pour combien de jours ?
+                </h3>
+                <form class="number-day valide">
+                  <input 
+                    id="numberDay" 
+                    type="number" 
+                    name="numberDay" 
+                    min="1" 
+                    max="5" 
+                    class="text-muted text-center form-rounded shadow-sm"
+                    v-model="cnt"/>
+                </form>
+              </div>
+            </div>
+            <div v-html="cards">
+            </div>   
+        </div>
+      </div>
+  </body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="text/javascript" src="src/js/script.js"></script>
+</html>
+
+
