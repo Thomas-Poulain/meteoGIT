@@ -248,7 +248,7 @@ li a{
   width: 50px;
 }
 
-.plusDeDetail{
+#plusDeDetail{
   display: none;
   flex-direction: row;
 }

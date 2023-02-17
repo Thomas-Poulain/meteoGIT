@@ -106,7 +106,7 @@ createApp({
                         <div class="text-center">
                             <img src = "src/img/three-small-dots.png" alt ="logo afficher plus" onclick="showHide()" class="dots img-center">
                         </div>
-                        <div class="plusDeDetail" v-show="details">
+                        <div id="plusDeDetail">
                             <div class="colonne1">
                                 <div class="col text-center margAtTop">
                                     <h3>`+this.weather.city.coord.lon+`°</h3>
@@ -137,16 +137,13 @@ createApp({
             }
             console.log(this.details);
             this.cityQuery="";
+        },
+        showHide: function(){
+            this.details = !this.details
         }
     }
-
-
 }).mount('.container')
-
 function showHide() {
-    if ($('.plusDeDetail').css("display") == "none"){
-        $('.plusDeDetail').css("display", "flex");
-    }else{
-        $('.plusDeDetail').css("display", "none");
-    }
+    var e = document.getElementById('logo');
+       e.style.display = 'flex';
 }
