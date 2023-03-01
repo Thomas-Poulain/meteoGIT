@@ -12,7 +12,7 @@ Pour l'installation de notre application, vous devez extraire le .zip puis lance
 La page sur laquelle vous êtes arrivés après avoir suivis les informations précédentes devrait être la suivante:
 ***
 
-![MainPage](/images/rien.png "MainPage")
+![MainPage](images/menu.png "MainPage")
 
 ***
 C'est dans la **barre de recherche**, au millieu, que vous pouvez entrer le nom de la ville que vous souhaitez. Cliquez sur le **bouton** "valider" pour effectuer la recherche et afficher diverses  informations météorologiques.
@@ -28,7 +28,7 @@ Parmi les informations affichées, vous retrouverez une sélection des informati
 
 ***
 
-![MainPage](/images/vannes.png "Vannes")
+![MainPage](images/singleCarte.png "Vannes")
 
 ***
 
@@ -36,7 +36,7 @@ En bas du panel d'information de la carte, se trouve une icône: "...". Ce bouto
 
 ***
 
-![MainPage](/images/vannesEntier.png "VannesEntier")
+![MainPage](images/singleCarteEtendu.png "VannesEntier")
 
 ***
 
@@ -53,7 +53,7 @@ Parmi les informations complémentaires, vous retrouverez:
 Pour changer de ville, il suffit de rentrer une nouvelle ville dans la barre de recherche et de valider, les nouvelles informations remplaceront les anciennes.
 ***
 
-![MainPage](/images/bordeaux.png "Bordeaux")
+![Rennes](images/recherche.png "Rennes")
 
 ***
 
@@ -62,11 +62,17 @@ Pour changer de ville, il suffit de rentrer une nouvelle ville dans la barre de 
 
 ***
 
-![MainPage](/images/bordeauxErreur.png "Bordeaux")
+![NonVille](images/pasDeCarte.png "NonVille")
 
 ***
 
-Un deuxi./ème champs de saisie permet de changer le nombre de jours couvert par les précisions.
+Un deuxième champs de saisie permet de changer le nombre de jours couvert par les prédictions.
+
+***
+
+![PlusieursCartes](images/recherche.png "PlusieursCartes")
+
+***
 ### 2) Page de contact
 
 Cette page, accessible via le menu, permet d'accéder aux noms, photos de profils et groupes des deux créateurs (nous-même)
