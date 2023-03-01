@@ -28,7 +28,7 @@ Parmi les informations affichées, vous retrouverez une sélection des informati
 
 ***
 
-![MainPage](images/singleCarte.png "Vannes")
+![Vannes](images/singleCarte.png "Vannes")
 
 ***
 
@@ -36,7 +36,7 @@ En bas du panel d'information de la carte, se trouve une icône: "...". Ce bouto
 
 ***
 
-![MainPage](images/singleCarteEtendu.png "VannesEntier")
+![VannesEntier](images/singleCarteEtendu.png "VannesEntier")
 
 ***
 
@@ -53,7 +53,7 @@ Parmi les informations complémentaires, vous retrouverez:
 Pour changer de ville, il suffit de rentrer une nouvelle ville dans la barre de recherche et de valider, les nouvelles informations remplaceront les anciennes.
 ***
 
-![Rennes](images/recherche.png "Rennes")
+![Rennes](images/recherchePlus.png "Rennes")
 
 ***
 
